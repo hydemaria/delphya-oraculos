@@ -26,11 +26,11 @@ cd delphya-oraculos
 Abra o arquivo index.html no seu navegador favorito.
 
 ## Tecnologias usadas
-HTML5
 
-CSS3 (Flexbox e Media Queries)
+- `HTML5` 
+- `CSS3 (Flexbox e Media Queries)` 
+- `Google Fonts: DM Serif Text, Space Mono, Special Elite`
 
-Google Fonts: DM Serif Text, Space Mono, Special Elite
 
-Contato
+## Contato
 Se quiser saber mais ou colaborar, me chama no LinkedIn 
