@@ -260,3 +260,190 @@ header p {
     font-size: 1.8rem;
   }
 }
+#depoimentos {
+  background-color: #1b2141; /* mesmo tom de azul do site */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container-depoimentos {
+  background-color: #1b2141;
+  color: white;
+  padding: 60px 20px;
+}
+
+.titulo-secao-clara {
+  font-family: 'Special Elite', serif;
+  font-size: 32px;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 20px; /* alinha com o restante do conteúdo */
+  margin-top: -70px; /* ou um valor menor, tipo 10px */
+}
+
+
+.depoimento {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 800px;
+  margin: 40px auto 40px 60px; /* empurra mais pra esquerda */
+  font-family: "DM Serif Text", serif;
+}
+
+.depoimento.right {
+  flex-direction: row-reverse;
+  text-align: right;
+  margin: 40px 60px 40px auto; /* empurra mais pra direita */
+}
+
+.foto-cliente{
+  width: 120px;                /* largura fixa */
+  height: 120px;               /* altura igual à largura */
+  border-radius: 50%;          /* forma circular */
+  object-fit: cover;           /* preenche o círculo sem distorcer */
+  border: 3px solid #edc261;   /* borda dourada pra destacar */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* sombra sutil */
+}
+
+blockquote {
+  font-size: 18px;
+  line-height: 1.6;
+  position: relative;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  color: #edc261;
+}
+
+.tipos-atendimentos {
+  padding: 60px 20px;
+  background-color: #1b2141; /* azul profundo do site */
+  color: white;
+}
+
+.titulo-secao-clara.centralizado {
+  font-family: 'Special Elite', serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards-atendimentos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* para mobile quebrar linha */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-atendimento {
+  background-color: #2b3258; /* tom escuro para contraste */
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 250px; /* cresce, encolhe e base 250px */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  text-align: center;
+  color: #f5e9c0; /* bege claro para texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-atendimento img {
+  width: 230px;      /* define largura fixa */
+  height: 230px;     /* define altura fixa */
+  object-fit: cover; /* mantém a imagem cortando o excesso, sem distorcer */
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+
+.card-atendimento h3 {
+  font-family: 'Special Elite', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #edc261; /* amarelo mostarda */
+}
+
+.card-atendimento p {
+  font-family: 'DM Serif Text', serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #f5e9c0;
+}
+
+.frase-final {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Special Elite', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #edc261;
+  text-shadow: 1px 1px 2px #000000aa;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cards-atendimentos {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card-atendimento {
+    max-width: 100%;
+  }
+}
+
+#contato {
+  background-color: #edc261; /* amarelo mostarda */
+  padding: 40px 20px;
+}
+
+.container-contato {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.imagem-contato {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.botao-contato {
+  background-color: #1b2141; /* azul profundo da seção anterior */
+  color: #fff; 
+  text-shadow:
+    0 0 0.5px #fff,
+    0 0 1.5px #fff;
+  padding: 60px 30px;
+  border-radius: 12px;
+  font-family: 'Special Elite', serif;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  max-width: 500px;
+  text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;}
+
+.botao-contato:hover {
+  color: #fff;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 5px #fff;
+}
