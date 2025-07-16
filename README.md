@@ -1,29 +1,47 @@
-# Delphya Oráculos
+ 🔮 Delphya Oráculos
 
-Bem-vindo(a) ao repositório do site **Delphya Oráculos** — um templo virtual onde a sabedoria ancestral encontra a alma do presente.
+Bem-vindos ao site oficial da *Delphya*, um espaço intuitivo, místico e acessível para suas consultas oraculares.
 
-## Sobre
+---
 
-Este projeto é um site estático feito com HTML e CSS, pensado para acolher pessoas em busca de orientação espiritual e conexão com a energia dos oráculos.
+## 🌐 Projeto
 
-O design é simples, elegante e focado na experiência do usuário.
+Este projeto é uma página estática elegante, responsiva e focada na experiência do consulente. Desenvolvido com *HTML* e *CSS* puros, com toques de design refinado, animações suaves e foco total na clareza das informações.
 
-## Estrutura do Projeto
+---
 
-- `index.html` — Página principal com seções sobre quem somos e como funcionam os atendimentos.
-- `style.css` — Estilos para o layout, tipografia e responsividade.
-- `/images/` — Imagens usadas no site, incluindo logo e fotos das sacerdotisas.
+## 🎨 Funcionalidades e Estilo
 
-## Como rodar localmente
+- Cabeçalho personalizado com tipografia mágica ✨  
+- Seção “Sobre” com imagem circular e layout responsivo  
+- Lista de atendimentos com balas estilizadas e sombras suaves  
+- Tipografia com personalidade, espaçamento e hierarquia visual  
+- *Seção de Depoimentos* com layout alternado, imagens circulares e destaque ao texto  
+- *Seção de Tipos de Atendimentos* com 4 cards em linha, cada um com descrição, duração e valor  
+- *Chamada para Ação (CTA)* com botão luminoso e imagem lateral
+
+---
+
+## 📸 Imagens
+
+As imagens estão localizadas na pasta /images.  
+Certifique-se de manter os mesmos nomes e formatos ao substituir.
+
+---
+
+## 🚀 Como usar
 
 1. Clone o repositório:
+
+   ```bash
    git clone git@github.com:hydemaria/delphya-oraculos.git
-   
-2. Entre na pasta do projeto:
 
-cd delphya-oraculos
+   2.	Entre na pasta do projeto:
+      ```bash
+   cd delphya-oraculos
 
-Abra o arquivo index.html no seu navegador favorito.
+3.	Abra o arquivo index.html no seu navegador favorito.
+Ou, se preferir, utilize o Live Server no VSCode para uma visualização dinâmica.
 
 ## Tecnologias usadas
 
