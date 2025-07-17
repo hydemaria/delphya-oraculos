@@ -17,7 +17,7 @@ body {
 header {
   background-color: #edc261;
   text-align: center;
-  padding: 40px 20px;
+  padding: 80px 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ header {
 }
 
 header img {
-  max-width: 70px; /* controla o tamanho da logo */
+  max-width: 700px; /* controla o tamanho da logo */
   width: 100%;
   height: auto;
 }
