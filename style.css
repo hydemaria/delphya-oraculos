@@ -1,141 +1,131 @@
-/* Reset básico */
+
+/* RESET GERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ESTILO GERAL DO SITE */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Arial, sans-serif;
   background-color: #fff;
-  color: #1b2141;
+  color: #333;
+  line-height: 1.5;
 }
 
-/* Estilo do cabeçalho */
 header {
-  background-color: #edc261; /* amarelo mostarda */
+  background-color: #edc261;
   text-align: center;
   padding: 40px 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header img {
+  max-width: 800px; /* controla o tamanho da logo */
+  width: 100%;
+  height: auto;
 }
 
 .subtitle {
   font-family: "Space Mono", monospace;
   font-size: 16px;
-  font-weight:bold;
+  font-weight: bold;
   font-style: normal;
-
-}
-header h1 {
-  font-size: 48px;
-  letter-spacing: 2px;
   color: #1b2141;
-  text-shadow: 2px 2px #00000066;
+  margin: 0;
 }
 
-header p {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #1b2141;
-  font-style: italic;
-}
+
+/* Container da seção sobre */
 
 #sobre {
-  background-color: #1b2141; /* azul profundo */
+  background-color: #1b2141;
+  padding: 80px 20px; 
   color: #fff;
-  padding: 60px 20px;
+  font-family: "DM Serif Text", serif;
 }
 
-.titulo-sobre {
-  font-family: "Special Elite", system-ui;
-  font-size: 40px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.texto-sobre h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.texto-sobre p {
-  font-size: 18px;
-  line-height: 1.6;
-}
 .container-sobre {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* espaço entre imagem e texto */
+  gap: 40px;
   max-width: 900px;
   margin: 0 auto;
-  flex-wrap: wrap;
-  position: relative;
+  padding: 0 20px;
 }
 
+.imagem-sobre {
+  width: 550px; 
+  height: auto;
+  margin-left: -100px; /
+}
 .texto-sobre {
   flex: 1;
   text-align: left;
-  margin-left: 50px; /* aqui você controla o quanto quer empurrar p direita */
+  margin-left: 50px;
+}
+
+.titulo-sobre {
+  font-family: "Special Elite", cursive;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #edc261;
+  text-shadow: 1px 1px 2px #000000aa;
 }
 
 .paragrafo-sobre {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-  max-width: 500px;  /* ou 40ch, se quiser por número de caracteres */
   font-size: 18px;
   line-height: 1.6;
+  color:#FFF; 
 }
 
-
-.imagem-sobre {
-  width: 600px;  /* aumenta para 300px */
-  height: auto;  /* mantem a proporção da imagem */
-  border-radius: 50%; /* mantém a forma arredondada */
-  object-fit: cover;
-  margin-left: -200px; /* move a imagem para esquerda, mas mantem alinhamento */
-
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
   .container-sobre {
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
   }
 
   .imagem-sobre {
     width: 80%;
     max-width: 300px;
     margin-left: 0;
+    margin-bottom: 30px;
   }
 
   .texto-sobre {
     margin-left: 0;
     text-align: center;
   }
-
-  .paragrafo-sobre {
-    max-width: 90%;
-  }
 }
+
+
 #atendimentos {
-  padding: 60px 20px;
+  padding: 80px 20px 60px; 
   background-color: #fff;
   color: #1b2141;
   font-family: 'Georgia', serif;
 }
 
+
 .container-atendimentos {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   max-width: 900px;
   margin: 0 auto;
   gap: 40px;
+  flex-wrap: nowrap; 
 }
 
 .texto-atendimentos {
@@ -145,7 +135,7 @@ header p {
 }
 
 .imagem-atendimentos img {
-  max-width: 350px;
+  max-width: 450px;
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
@@ -173,7 +163,7 @@ header p {
 .linha2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #edc261; /* amarelo mostarda */
+  color: #edc261
 }
 
 .linha3 {
@@ -183,7 +173,7 @@ header p {
   font-style: italic;
 }
 
-/* Texto geral do atendimento */
+
 .texto-atendimentos-geral {
   font-family: "DM Serif Text", serif;
   font-size: 18px;
@@ -260,12 +250,15 @@ header p {
     font-size: 1.8rem;
   }
 }
+
+
 #depoimentos {
-  background-color: #1b2141; /* mesmo tom de azul do site */
+  background-color: #1b2141; 
   color: white;
-  padding: 60px 20px;
+  padding: 30px 20px 60px; /* diminuiu o topo */
   text-align: center;
 }
+
 
 .container-depoimentos {
   background-color: #1b2141;
@@ -278,9 +271,10 @@ header p {
   font-size: 32px;
   text-align: left;
   margin-bottom: 40px;
-  margin-left: 20px; /* alinha com o restante do conteúdo */
-  margin-top: -70px; /* ou um valor menor, tipo 10px */
+  margin-left: 20px;
+  margin-top: -40px;
 }
+
 
 
 .depoimento {
@@ -288,23 +282,23 @@ header p {
   align-items: flex-start;
   gap: 20px;
   max-width: 800px;
-  margin: 40px auto 40px 60px; /* empurra mais pra esquerda */
+  margin: 40px auto 40px 60px;
   font-family: "DM Serif Text", serif;
 }
 
 .depoimento.right {
   flex-direction: row-reverse;
   text-align: right;
-  margin: 40px 60px 40px auto; /* empurra mais pra direita */
+  margin: 40px 60px 40px auto; 
 }
 
 .foto-cliente{
-  width: 120px;                /* largura fixa */
-  height: 120px;               /* altura igual à largura */
-  border-radius: 50%;          /* forma circular */
-  object-fit: cover;           /* preenche o círculo sem distorcer */
-  border: 3px solid #edc261;   /* borda dourada pra destacar */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* sombra sutil */
+  width: 120px;              
+  height: 120px;               
+  border-radius: 50%;         
+  object-fit: cover;           
+  border: 3px solid #edc261;   
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
 }
 
 blockquote {
@@ -322,7 +316,7 @@ blockquote cite {
 
 .tipos-atendimentos {
   padding: 60px 20px;
-  background-color: #1b2141; /* azul profundo do site */
+  background-color: #1b2141; 
   color: white;
 }
 
@@ -343,22 +337,22 @@ blockquote cite {
 }
 
 .card-atendimento {
-  background-color: #2b3258; /* tom escuro para contraste */
+  background-color: #2b3258; 
   border-radius: 12px;
   padding: 20px;
-  flex: 1 1 250px; /* cresce, encolhe e base 250px */
+  flex: 1 1 250px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   text-align: center;
-  color: #f5e9c0; /* bege claro para texto */
+  color: #f5e9c0; 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .card-atendimento img {
-  width: 230px;      /* define largura fixa */
-  height: 230px;     /* define altura fixa */
-  object-fit: cover; /* mantém a imagem cortando o excesso, sem distorcer */
+  width: 230px;      
+  height: 230px;     
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
@@ -369,7 +363,7 @@ blockquote cite {
   font-family: 'Special Elite', serif;
   font-size: 22px;
   margin-bottom: 12px;
-  color: #edc261; /* amarelo mostarda */
+  color: #edc261; 
 }
 
 .card-atendimento p {
@@ -486,14 +480,14 @@ blockquote cite {
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
-  transform: translateX(-120px); /* 👈 move para a esquerda */
+  transform: translateX(-120px); 
 }
 
 
 .contato-texto h3 {
   font-family: 'Special Elite', serif;
   font-size: 25px;
-  color: #fff; /* 🌕 agora vai ficar branco */
+  color: #fff; /
   margin-bottom: 8px;
 }
 
@@ -503,10 +497,10 @@ blockquote cite {
 }
 
 .contato-imagem-centro {
-  flex: 0 0 auto; /* deixa a largura natural da imagem */
+  flex: 0 0 auto; 
   display: flex;
-  justify-content: flex-start; /* empurra pra esquerda */
-  margin-left: -200px; /* seu valor pra empurrar */
+  justify-content: flex-start; 
+  margin-left: -200px; 
 }
 
 .contato-imagem-centro img {
