@@ -394,48 +394,50 @@ blockquote cite {
     max-width: 100%;
   }
 }
+/* SEÇÃO CONTATO-BOTAO */
 
-#contato {
-  background-color: #edc261; 
-  padding: 40px 20px;
+
+#contato-botao {
+  background-color: #edc261;
+  margin-top: -
+
 }
 
 .container-contato {
   display: flex;
   align-items: center;
-  gap: 60px; 
-  max-width: 900px;
+  justify-content: flex-start; /* mudou! */
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  flex-wrap: nowrap; 
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
+
 .imagem-contato {
-  width: 500px;
+  width: 100%;
+  max-width: 520px;
   height: auto;
-  margin-left: -200px; 
-  border: none;
-  box-shadow: none;
+  flex-shrink: 0;
+  margin-left: 0; /* garante que não tem espaçamento */
 }
 
 .box-botao-contato {
-  flex: 1 1 auto; 
-  min-width: 350px; 
-  padding-right: 0; 
+  flex: 1;
   display: flex;
-  justify-content: flex-end; 
-  max-width: none; 
+  justify-content: center;
+  padding: 0 20px;
 }
 
 
 .botao-contato {
-  width: 100%; 
-  max-width: none; 
+  display: inline-block;
   text-decoration: none;
-  padding: 50px 40px;
+  max-width: 400px;
+  padding: 20px 30px;
   border-radius: 100px;
-  font-size: 28px;
+  font-size: 24px;
   font-family: 'Special Elite', serif;
   font-weight: bold;
   color: #fff;
@@ -443,10 +445,7 @@ blockquote cite {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  text-shadow:
-    0 0 6px #fff,
-    1px 1px 2px #000000aa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   filter: drop-shadow(0 0 4px #edc261aa);
   position: relative;
   z-index: 10;
@@ -454,191 +453,303 @@ blockquote cite {
 
 .botao-contato:hover {
   filter: drop-shadow(0 0 8px #edc261ff);
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-.botao-contato:hover {
-  filter: drop-shadow(0 0 8px #edc261ff);
-  transform: scale(1.03);
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container-contato {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imagem-contato {
+    max-width: 300px;
+  }
+
+  .box-botao-contato {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .botao-contato {
+    max-width: 100%;
+    font-size: 20px;
+    padding: 15px 25px;
+  }
 }
 
-.contato-info-container {
+
+
+/* SEÇÃO CONTATO-INFO */
+
+#contato-info {
+  background-color: #edc261;
+  padding: 40px 20px;
+}
+
+#contato-info h3 {
+  font-family: "Special Elite", cursive;
+  font-size: 22px;  
+  color: #fff;* 
+  margin-bottom: 10px;
+  text-align: left;
+} 
+
+.contato-linha {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
-  margin: 40px auto 0 auto;
-  gap: 20px;
-  padding: 0 20px;
   flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
-.contato-texto {
-  flex: 1 1 250px;
-  color: #fff; 
-  font-family: 'DM Serif Text', serif;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: left;
-  transform: translateX(-120px); 
-}
-
-
-.contato-texto h3 {
-  font-family: 'Special Elite', serif;
-  font-size: 25px;
-  color: #fff; /
-  margin-bottom: 8px;
-}
-
-.contato-texto p {
-  color:#1b2141;
-  font-weight: 700;
-}
-
-.contato-imagem-centro {
-  flex: 0 0 auto; 
-  display: flex;
-  justify-content: flex-start; 
-  margin-left: -200px; 
-}
-
-.contato-imagem-centro img {
-  max-width: 220px;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  transform: translateX(-80px);
-}
-
-.contato-info-container {
-  padding-left: 10px; 
-}
-
-
-/* Container geral das redes sociais */
 
 .contato-redes {
+  max-width: none;       /* permite expandir */
+  width: auto;           /* tamanho automático */
+  min-width: 250px;      /* largura mínima pra não sumir */
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 15px; 
-  padding-left: 0;
-  margin-left: 0;
-  max-width: 300px; /
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: auto;     /* alinha à direita */
+  white-space: normal;   /* deixa quebrar linha normalmente */
+  overflow: visible;     /* garante que nada seja cortado */
+  padding-right: 10px;   /* deixa um espacinho do lado direito */
+}
+
+
+.contato-texto,
+.folha-central,
+.contato-redes {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.contato-texto h3 {
+  font-family: "Special Elite", cursive;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: ;
   
 }
 
-/* Cada link/redes sociais */
+.contato-texto p {
+  font-family: 'DM Serif Text', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left; /* o segredo pra não ficar centralizado */
+  margin: 0;
+  color: #1b2141;
+  white-space: nowrap; /* evita que o texto quebre em várias linhas */
+  overflow-wrap: normal; /* impede quebra automática */
+  word-break: keep-all; /* evita que palavras sejam divididas */
+}
+
+.folha-central img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  /* nenhum width fixo = tamanho natural */
+}
+
+
+.etiqueta-redes {
+  font-family: 'Special Elite', cursive;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1b2141;
+  background-color: transparent;
+  padding: 5px 0;
+  user-select: none;
+}
+
+.redes-icones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .rede-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #fff;
-  font-family: 'DM Serif Text', serif;
+  color: #1b2141;
   font-size: 18px;
   text-decoration: none;
-  transition: color 0.3s ease;
   cursor: pointer;
   user-select: none;
-}
-.contato-info-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  margin-top: 40px;
+  flex-direction: row; /* ícone e texto lado a lado */
+  transition: color 0.3s ease;
 }
 
-/* Ícone da rede social */
+.rede-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1b2141;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+
 .rede-item img {
   width: 32px;
   height: 32px;
   filter: drop-shadow(0 0 1px #000000aa);
-  flex-shrink: 0; /* não encolher */
 }
 
-/* Hover e foco (acessibilidade) */
+
 .rede-item:hover,
 .rede-item:focus {
   color: #edc261;
   outline: none;
 }
 
-/* Responsividade: em telas pequenas, centraliza e ajusta tamanho */
+/* Responsividade */
 @media (max-width: 768px) {
   .contato-redes {
-    align-items: center; /
-    max-width: 100%;
+    margin-left: 0;       /* remove margem lateral no mobile */
+    padding: 15px 20px;   /* um pouco menos de padding */
+    text-align: center;   /* centraliza texto e ícones */
+    align-items: center;  /* centraliza itens flex */
   }
 
   .rede-item {
-    font-size: 16px;
+    justify-content: center; /* centraliza os links */
   }
 }
+
 .etiqueta-redes {
-  background-color: #1b2141;
-  color: #edc261;
+  display: inline-block;
+  background-color: #1b2141; /* mesma cor do botão */
+  color: #edc261;            /* amarelo do tema */
   font-family: 'Special Elite', cursive;
   font-size: 20px;
-  font-weight: 600;
-  border-radius: 30px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 100px;      /* arredondadão igual o botão */
+  cursor: default;
+  user-select: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  text-align: center;
-  padding: 15px 30px;
-  margin-bottom: 20px;
-  display: inline-block;
-  white-space: nowrap; 
+  filter: drop-shadow(0 0 4px #edc261aa);
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  white-space: nowrap; /* força texto em uma linha só */
+  overflow: hidden;    /* esconde qualquer excesso */
+  text-overflow: ellipsis; /* adiciona “...” se cortar */
 }
 
-.etiqueta-redes:hover {
-  background-color: #edc261;
-  color: #1b2141;
-} 
+.etiqueta-redes:hover,
+.etiqueta-redes:focus {
+  filter: drop-shadow(0 0 8px #edc261ff);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Responsividade contato-info */
+@media (max-width: 1024px) {
+  #contato-info .contato-texto {
+    margin-left: 0;
+    padding-left: 10px;
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  #contato-info {
+    margin-top: 0;
+    padding: 30px 15px;
+  }
+
+  .contato-info-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .contato-texto {
+    text-align: center;
+    margin-left: 0;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .contato-imagem-lateral {
+    justify-content: center;
+  }
+
+  .contato-redes {
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .rede-item {
+    flex-direction: row;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .rede-item img {
+    margin-bottom: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Faz o container principal empilhar tudo verticalmente */
+  #contato-info .contato-info-container {
+    flex-direction: column;
+    align-items: center; /* centraliza tudo horizontalmente */
+    gap: 30px; /* espaçamento entre os blocos */
+  }
+
+  /* Ajusta a div das redes sociais */
+  .contato-redes {
+    width: 100%;           /* ocupa toda largura disponível */
+    max-width: 300px;      /* limita para não ficar esticada demais */
+    margin: 0 auto;        /* centraliza horizontalmente */
+  }
+
+  /* Se quiser centralizar o texto dos links */
+  .contato-redes .rede-item {
+    justify-content: flex-start; /* ou center, se preferir */
+  }
+}
 
 
 /* CREDITOS */
 
 .rodape-personalizado {
-  padding-top: 80px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #edc261; /* mesma cor da seção anterior */
+  padding: 20px 15px;
   text-align: center;
-  font-family: 'DM Serif Text', serif;
   color: #1b2141;
-  background-color: transparent;
-  user-select: none;
-  font-size: 12px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-
-.creditos a {
-  color: #1b2141; 
-  text-decoration: none;  
-  border-bottom: 2px solid transparent; 
-  transition: color 0.3s ease, border-bottom-color 0.3s ease;
-  cursor: pointer;
-}
-
-.creditos a:hover {
-  color: #edc261;   
-  border-bottom-color: #edc261; 
-  text-decoration: none;
+  font-family: 'DM Serif Text', serif;
+  font-size: 14px;
 }
 
 .rodape-personalizado a {
   color: #1b2141;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-.rodape-personalizado a:hover {
-  text-decoration: underline;
+.rodape-personalizado a:hover,
+.rodape-personalizado a:focus {
+  color: #a87154;
+  outline: none;
+}
+
+.rodape-personalizado p {
+  margin: 5px 0;
 }
