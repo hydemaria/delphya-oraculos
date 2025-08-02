@@ -2,7 +2,7 @@
  ## 🔮 Delphya Oráculos
 
 
-Bem-vindos ao site oficial da *Delphya*, um espaço intuitivo, místico e acessível para suas consultas oraculares.
+Bem-vindos ao site oficial da [Delphya](https://delphya.netlify.app/), um espaço intuitivo, místico e acessível para suas consultas oraculares.
 
 ---
 
