@@ -286,6 +286,13 @@ header img {
   font-family: "DM Serif Text", serif;
 }
 
+@media (max-width: 768px) {
+  .depoimento, .depoimento.right {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .depoimento.right {
   flex-direction: row-reverse;
   text-align: right;
@@ -347,6 +354,10 @@ blockquote cite {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card-atendimento:hover {
+  transform: rotateY(10deg);
 }
 
 .card-atendimento img {
@@ -456,6 +467,9 @@ blockquote cite {
   transform: scale(1.05);
 }
 
+.botao-contato, .rede-item {
+  transition: all 0.3s ease;
+}
 
 
 /* RESPONSIVO */
